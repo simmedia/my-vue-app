@@ -1,4 +1,4 @@
-# portfolio
+# VueJs Application, Vue-Router, Vuex and Vuetify
 
 ## Project setup
 ```
