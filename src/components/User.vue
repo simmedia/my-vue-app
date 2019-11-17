@@ -1,9 +1,9 @@
 <template>
     <div>
-        {{ userDetails.name }} <hr>
-        {{ userDetails.age }}
-        {{ userDetails.desc }}
-        {{ userDetails.city }}
+        {{ user.name }} <hr>
+        {{ user.age }}
+        {{ user.desc }}
+        {{ user.city }}
     </div>
 </template>
 
@@ -13,11 +13,8 @@ export default {
     props: ['user'],
     data() {
         return {
-            userDetails: {}
+            
         }
-    },
-    created() {
-            this.userDetails = this.user   
     }
 }
 </script>

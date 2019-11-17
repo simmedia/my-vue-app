@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <v-navigation-drawer v-model="drawer" app clipped>
+    <v-navigation-drawer v-model="drawer" app temporary clipped>
       <v-list dense>
         <router-link to="/">
           <v-list-item link>
@@ -37,7 +37,8 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left>
+
+    <v-app-bar app clipped>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>SIMMEDIA</v-toolbar-title>
     </v-app-bar>
@@ -67,7 +68,7 @@ export default {
   },
 
   created() {
-    this.$vuetify.theme.dark = true;
+    this.$vuetify.theme.dark = false;
   },
 
   data: () => ({
@@ -93,5 +94,14 @@ a {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+ul {
+  position: absolute;
+  right: 50px;
+}
+
+ul div {
+  margin-left: 20px;
 }
 </style>
