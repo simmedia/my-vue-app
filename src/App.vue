@@ -37,10 +37,14 @@
       </v-list>
     </v-navigation-drawer>
 
-
+  
     <v-app-bar app clipped>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>SIMMEDIA</v-toolbar-title>
+      <div class="navItems">
+        <router-link to="/login">LogIn</router-link>
+        <router-link to="/register">SignUp</router-link>
+      </div>
     </v-app-bar>
 
     <v-content>
@@ -96,12 +100,12 @@ a {
   opacity: 0;
 }
 
-ul {
+.navItems {
   position: absolute;
   right: 50px;
 }
 
-ul div {
+.navItems a {
   margin-left: 20px;
 }
 </style>
